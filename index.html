@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EpicRaíces-Inicio</title>
+    <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="imagenes\logoEpic.jpg" alt="EpicRaíces Logo" id="logo"> 
+            <div class="contenedor">
+                <div class="widget">
+                  <div class="fecha">
+                    <p id="diaSemana" class="diaSemana"></p>
+                    <p id="dia" class="dia"></p>
+                    <p>de</p>
+                    <p id="mes" class="mes"></p>
+                    <p>del</p>
+                    <p id="anio" class="anio"></p>
+                  </div>
+                  <div class="reloj">
+                    <p id="horas" class="horas"></p>
+                    <p>:</p>
+                    <p id="minutos" class="minutos"></p>
+                    <p>:</p>
+                    <div class="cajaSegundos">
+                      <p id="ampm" class="ampm"></p>
+                      <p id="segundos" class="segundos"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <h1>EpicRaíces</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo de Plantas</a></li>
+                    <li><a href="guia.html">Guías de Cuidado</a></li>
+                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="boletin.html">Boletines</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    
+        <script>
+            function hora() {
+                var fecha = new Date();
+                var diasSemana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+                var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+    
+                var diaSemana = diasSemana[fecha.getDay()];
+                var dia = fecha.getDate();
+                var mes = meses[fecha.getMonth()];
+                var anio = fecha.getFullYear();
+                var   
+     horas = fecha.getHours();
+                var minutos = fecha.getMinutes();
+                var segundos = fecha.getSeconds();
+                var ampm = horas >= 12 ? "p.m." : "a.m.";
+                horas = horas % 12;
+                horas = horas ? horas   
+     : 12;
+    
+                document.getElementById("diaSemana").textContent = diaSemana;
+                document.getElementById("dia").textContent = dia;
+                document.getElementById("mes").textContent = mes;
+                document.getElementById("anio").textContent   
+     = anio;
+                document.getElementById("horas").textContent = horas;
+                document.getElementById("minutos").textContent = minutos;
+                document.getElementById("segundos").textContent   
+     = segundos;
+                document.getElementById("ampm").textContent   
+     = ampm;
+            }
+    
+            // Llama a la función para mostrar la hora inicial
+            hora();
+    
+            // Actualiza la hora cada segundo
+            setInterval(hora, 1000);
+        </script>
+        
+    </header>
+
+ 
+</body>
+</html>
+    <section id="inicio">
+        <div class="container">
+            <h2>Bienvenido a EpicRaíces</h2>
+            <p>Descubre el mundo de las plantas con nuestra guía completa y catálogo de vivero.</p>
+
+           <!-- Carrusel -->
+           <div class="carousel" id="carousel">
+            <div class="carousel-images">
+                <img src="imagenes\tulipan.jpg" alt="Planta 1">
+                <img src="imagenes\lavanda.jpg" alt="Planta 2">
+                <img src="imagenes\juanita.jpg" alt="Planta 3">
+                <img src="imagenes\camaron.jpg" alt="Planta 4">
+                <img src="imagenes\cayena.jpg" alt="Planta 5">
+                <img src="imagenes\flor.jpg" alt="Planta 6">
+                <img src="imagenes\corroto.jpg" alt="Planta 7">
+                <img src="imagenes\anturio.jpg" alt="Planta 8">
+                <img src="imagenes/hortensias.jpg" alt="Planta 9">
+                <img src="imagenes\lavanda1.jpg" alt="Planta 10">
+             
+
+            </div>
+            <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="catalogo">
+        <div class="container">
+            <h2>Catálogo de Plantas</h2>
+            <p>Aquí encontrarás una variedad de plantas con descripciones y cuidados recomendados.</p>
+        </div>
+    </section>
+
+    <section id="guias">
+        <div class="container">
+            <h2>Guías de Cuidado</h2>
+            <p>Consulta nuestras guías para aprender a cuidar tus plantas de la mejor manera.</p>
+        </div>
+    </section>
+
+
+    <section id="blog">
+        <div class="container">
+            <h2>Sobre Nosotros</h2>
+            <p>Lee nuestros artículos sobre jardinería, tendencias y consejos útiles.</p>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p>Si tienes alguna pregunta o necesitas más información, no dudes en contactarnos.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 EpicRaíces. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+       let slideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-images img');
+        const totalSlides = slides.length;
+        const carouselInterval = 3000; // Intervalo para el movimiento automático (en milisegundos)
+        let autoSlide;
+
+        function moveSlide(step) {
+            slideIndex = (slideIndex + step + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            const offset = -slideIndex * 100;
+            document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
+        }
+
+        function startCarousel() {
+            autoSlide = setInterval(() => moveSlide(1), carouselInterval);
+        }
+
+        function stopCarousel() {
+            clearInterval(autoSlide);
+        }
+
+        // Inicia el carrusel automático
+        startCarousel();
+
+        // Detener el movimiento automático al pasar el ratón sobre el carrusel
+        const carousel = document.getElementById('carousel');
+        carousel.addEventListener('mouseover', stopCarousel);
+        carousel.addEventListener('mouseout', startCarousel);
+    </script>
+</body>
+</html>
+

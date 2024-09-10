@@ -1,0 +1,238 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    background-image:url(../imagenes/fondo.jpg);
+    background-size:cover;
+    padding: 20px;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+    background-position: center;
+
+}
+
+
+#logo {
+    width: 50px; 
+    height: auto;
+    margin-left: 100px;
+}
+/*hora y fecha*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  
+  body {
+    font-size: 16px;
+  }
+  
+  .contenedor {
+    width: 40%;
+    height: 50%;
+    position: relative;
+    max-width: 1000px;
+    margin-left: -900px;
+  }
+  
+  .widget {
+    width: 40%;
+    height: 40%;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  
+  .widget p {
+    display: inline-block;
+    line-height: 1em;
+  
+  }
+  
+  .fecha {
+    font-family: arial;
+    text-align: center;
+    font-size: 1.0em;  /* Reducido de 1.5em a 1.2em */
+    margin-bottom: 5px;
+    background:  rgba(14, 194, 59, 0);
+    padding: 0%;  /* Reducido de 20px a 15px */
+    width: 100%;
+  }
+  
+  .reloj {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    width: 100%;
+    padding: 0;
+    font-size: 1.0em;  /* Reducido de 2em a 1.8em */
+    text-align: center;
+    background: rgba(14, 194, 59, 0);
+  }
+  
+  .reloj .cajaSegundos {
+    display: inline-block;
+  }
+  
+  .reloj .ampm, .reloj .segundos {
+display: inline-flex;
+    font-size: 1.0rem;  /* Reducido de 2rem a 1.5rem */
+  }
+
+     /* Carrusel */
+     .carousel {
+        position: relative;
+        max-width: 100%;
+        margin: auto;
+        overflow: hidden;
+        height: 400px; /* Ajusta la altura según tus necesidades */
+    }
+
+    .carousel-images {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        height: 100%;
+    }
+
+    .carousel-images img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+    }
+
+       /* Carrusel */
+       .carousel {
+        position: relative;
+        max-width: 100%;
+        margin: auto;
+        overflow: hidden;
+        height: 400px; /* Ajusta la altura según tus necesidades */
+    }
+
+    .carousel-images {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        height: 100%;
+    }
+
+    .carousel-images img {
+        width: 100%;
+        height: auto;
+        flex-shrink: 0; /* Previene que las imágenes se reduzcan */
+    }
+
+    .carousel-button {
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        border: none;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 3px;
+    }
+
+    .carousel-button:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .prev {
+        left: 0;
+    }
+
+    .next {
+        right: 0;
+    }
+
+
+
+header {
+    background:#4CAF50;
+    color: #ffffff;
+    padding: 10px;
+    margin-top: 0%;
+    
+}
+
+header .container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-left: -500px;
+    
+    
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    
+    
+}
+
+nav ul li {
+    margin-left: 20px;
+    
+    
+    
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    
+    
+}
+
+section {
+    padding: 20px;
+    margin: 0.1px ;
+   
+    
+    
+}
+
+section .container {
+    width: 95%;
+    margin: 2% auto;
+    
+    
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+
+}
